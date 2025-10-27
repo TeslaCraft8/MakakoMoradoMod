@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "makakomorado",
+	"version": "${version}",
+	"name": "MakakoMorado",
+	"description": "fuap",
+	"authors": [
+		"teslacuck"
+	],
+	"contact": {
+		"homepage": "nada.com",
+		"sources": "fuap.png"
+	},
+	"license": "MIT",
+	"icon": "assets/makakomorado/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.teslacuck.MakakoMorado"
+		],
+      "client": [
+        "net.teslacuck.MakakoMoradoClient"
+      ],
+		"fabric-datagen": [
+			"net.teslacuck.MakakoMoradoDataGenerator"
+		]
+	},
+	"mixins": [
+		"makakomorado.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.17.3",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
