@@ -6,5 +6,7 @@ public class MakakoMoradoClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
 
+
+
     }
 }
