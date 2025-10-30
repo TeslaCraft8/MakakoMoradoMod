@@ -8,5 +8,11 @@
   "block.makakomorado.esensia_block": "Bloque de esensia",
   "block.makakomorado.raw_esensia_block": "Bloque de esensia cruda",
 
+
+  "block.makakomorado.esensia_ore": "Mena de esensia",
+  "block.makakomorado.deepslate_esensia_ore": "Mena de esensia de deepslate",
+  "block.makakomorado.black_esensia_ore": "Mena de esensia negra",
+  "block.makakomorado.end_esensia_ore": "Mena de esensia del end",
+
   "itemgroup.makakomorado": "Mono morado"
 }

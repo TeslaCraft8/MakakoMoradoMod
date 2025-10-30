@@ -24,6 +24,11 @@ public class ModItemGroups {
                         entries.add(ModItems.RAW_ESENSIA);
                         entries.add(ModBlocks.ESENSIA_BLOCK);
                         entries.add(ModBlocks.RAW_ESENSIA_BLOCK);
+                        //ores
+                        entries.add(ModBlocks.ESENSIA_ORE);
+                        entries.add(ModBlocks.DEEPSLATE_ESENSIA_ORE);
+                        entries.add(ModBlocks.BLACK_ESENSIA_ORE);
+                        entries.add(ModBlocks.END_ESENSIA_ORE);
 
                     }).build());
 
