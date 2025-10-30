@@ -16,16 +16,23 @@ import org.apache.commons.compress.compressors.lz77support.LZ77Compressor;
 
 public class ModBlocks
 {
-
+//bloques
     public static final Block BLOCK_OF_MONKEY_FUR =registerBlock("bloque_de_pelo_de_mono",
-            new Block(FabricBlockSettings.copyOf(Blocks.OAK_LOG).sounds(BlockSoundGroup.WOOL)));
+            new Block(FabricBlockSettings.copyOf(Blocks.WHITE_WOOL).sounds(BlockSoundGroup.WOOL)));
 
+    public static final Block ESENSIA_BLOCK =registerBlock("esensia_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).sounds(BlockSoundGroup.SCULK_CATALYST)));
+
+    public static final Block RAW_ESENSIA_BLOCK =registerBlock("raw_esensia_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).sounds(BlockSoundGroup.AMETHYST_BLOCK)));
+
+    //registrar los bloques
     private static Block registerBlock (String name, Block block){
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, new Identifier(MakakoMorado.MOD_ID, name), block);
     }
 
-
+//registrar los items de los bloques por separado
     private static Item registerBlockItem (String name, Block block){
         return Registry.register(Registries.ITEM, new Identifier(MakakoMorado.MOD_ID, name),
                 new BlockItem(block, new FabricItemSettings()));

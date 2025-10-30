@@ -18,6 +18,8 @@ public class ModItems {
 
     public static final Item CUBO_AUTISTA = registerItem("cubo_autista", new Item(new FabricItemSettings()));
     public static final Item PELO_DE_MONO = registerItem("pelo_de_mono", new Item(new FabricItemSettings()));
+    public static final Item ESENSIA = registerItem("esensia", new Item(new FabricItemSettings()));
+    public static final Item RAW_ESENSIA = registerItem("raw_esensia", new Item(new FabricItemSettings()));
 
     private static void addIngidientsItemGroup(FabricItemGroupEntries entries){
         entries.add(CUBO_AUTISTA);

@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:lime_dye"
+    },
+    "I": {
+      "item": "minecraft:stone_button"
+    },
+    "X": {
+      "item": "makakomorado:esensia_block"
+    },
+    "L": {
+      "item": "minecraft:lever"
+    }
+  },
+  "pattern": [
+    "L#L",
+    "#X#",
+    "III"
+  ],
+  "result": {
+    "item": "makakomorado:cubo_autista"
+  }
+}

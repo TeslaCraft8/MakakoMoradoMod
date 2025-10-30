@@ -1,7 +1,12 @@
 {
   "item.makakomorado.cubo_autista": "Cubo Autista",
   "item.makakomorado.pelo_de_mono": "Pelo de mono",
+  "item.makakomorado.esensia": "Esensia",
+  "item.makakomorado.raw_esensia": "Esensia cruda",
+
   "block.makakomorado.bloque_de_pelo_de_mono": "Bloque de pelo de mono",
+  "block.makakomorado.esensia_block": "Bloque de esensia",
+  "block.makakomorado.raw_esensia_block": "Bloque de esensia cruda",
 
   "itemgroup.makakomorado": "Mono morado"
 }

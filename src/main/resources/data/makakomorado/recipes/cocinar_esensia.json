@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 1,
+  "ingredient": {
+    "item": "makakomorado:raw_esensia"
+  },
+  "result": "makakomorado:esensia"
+}

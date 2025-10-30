@@ -1,6 +1,7 @@
 package net.teslacuck.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.minecraft.block.Block;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.item.ItemStack;
@@ -19,6 +20,10 @@ public class ModItemGroups {
                         entries.add(ModItems.CUBO_AUTISTA);
                         entries.add(ModItems.PELO_DE_MONO);
                         entries.add(ModBlocks.BLOCK_OF_MONKEY_FUR);
+                        entries.add(ModItems.ESENSIA);
+                        entries.add(ModItems.RAW_ESENSIA);
+                        entries.add(ModBlocks.ESENSIA_BLOCK);
+                        entries.add(ModBlocks.RAW_ESENSIA_BLOCK);
 
                     }).build());
 
