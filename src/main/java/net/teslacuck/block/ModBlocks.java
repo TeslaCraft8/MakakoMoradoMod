@@ -28,6 +28,7 @@ public class ModBlocks
     public static final Block RAW_ESENSIA_BLOCK =registerBlock("raw_esensia_block",
             new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).sounds(BlockSoundGroup.AMETHYST_BLOCK)));
 
+    //ores tacticos
     public static final Block ESENSIA_ORE = registerBlock("esensia_ore",
             new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.STONE).strength(1.8F, 9.0F), UniformIntProvider.create(2, 14)));
     public static final Block DEEPSLATE_ESENSIA_ORE = registerBlock("deepslate_esensia_ore",

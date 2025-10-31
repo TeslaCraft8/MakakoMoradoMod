@@ -30,6 +30,10 @@ public class ModItemGroups {
                         entries.add(ModBlocks.BLACK_ESENSIA_ORE);
                         entries.add(ModBlocks.END_ESENSIA_ORE);
 
+                        //custom items
+                        entries.add(ModItems.ORE_DETECTOR);
+                        entries.add(ModItems.WEIGHT_CALCULATOR);
+
                     }).build());
 
     public static void registerItemGroups(){

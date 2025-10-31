@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "makakomorado:esensia"
+    },
+    "X": {
+      "item": "minecraft:compass"
+    },
+    "L": {
+      "item": "minecraft:glass"
+    }
+  },
+  "pattern": [
+    "L#L",
+    "#X#",
+    "###"
+  ],
+  "result": {
+    "item": "makakomorado:ore_detector"
+  }
+}
