@@ -10,8 +10,8 @@ import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 import net.teslacuck.screens.WeightCalcScreenManager;
 
-public class WeightCalculatorItem extends Item {
-    public WeightCalculatorItem(Settings settings) {
+public class CuboAutista extends Item {
+    public CuboAutista(Settings settings) {
         super(settings);
     }
 
@@ -19,16 +19,8 @@ public class WeightCalculatorItem extends Item {
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack stack = user.getStackInHand(hand);
 
-        //daña item en la mano
-        stack.damage(1, user, (player) -> player.sendToolBreakStatus(hand));
 
-
-        if (world.isClient) {
-            MinecraftClient.getInstance().setScreen(
-                    new WeightCalcScreenManager(Text.literal("Calculadora de peso"))
-            );
-        }
-
+        user.sendMessage(Text.literal("mikel Putero"), true);
 
         return TypedActionResult.success(stack);
     }
