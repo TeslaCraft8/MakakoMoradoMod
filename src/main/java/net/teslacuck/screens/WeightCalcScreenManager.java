@@ -41,6 +41,13 @@ public class WeightCalcScreenManager extends Screen {
     int screenTick = 0;
     int realScreenTick = 0;
     int maxScreenTime = 200;
+    String loading = "";
+    private final String[] loadingScreenLabel = {
+            "Calculando: ",
+            "· Listo! ·",
+            "- Listo! -",
+    };
+    String loadScreen = "";
 
     @Override
     protected void init() {
@@ -76,9 +83,6 @@ public class WeightCalcScreenManager extends Screen {
         int centerX = this.width / 2;
         int centerY = this.height / 2;
 
-
-
-
         if (actualScreen == 4) screenLabelsTexts[4] = "Hola " + peso + "kg, tu peso es de: " + nombre + ".";
 
 
@@ -92,17 +96,37 @@ public class WeightCalcScreenManager extends Screen {
                 int textoAncho = this.textRenderer.getWidth(playerInput.getText());
                 int kgX = playerInput.getX() + textoAncho + 4;
                 int kgY = playerInput.getY() + 6;
-                if (textSwapToggle){
+                if (textSwapToggle) {
                     context.drawText(this.textRenderer, "kg", kgX, kgY, 0xFF7F7F7F, true);
-                }else {context.drawText(this.textRenderer, "kg", kgX, kgY, 0x447F7F7F, false);}
+                } else {
+                    context.drawText(this.textRenderer, "kg", kgX, kgY, 0x447F7F7F, false);
+                }
             }
 
         }
-        if (actualScreen == 3 && screenTick >= maxScreenTime) button.visible = true;
-    }
+        if (actualScreen == 3) {
 
+            int lastParentesis = loading.indexOf("]");
+            String loadingJustBar = (lastParentesis != -1) ? loading.substring(0, lastParentesis + 1) : loading;//a veces decide no haber parentesis por alguna razon :V
+            //al final no era eso pero dejo la logica por que no me fio
+
+            int loadingBarWidth = this.textRenderer.getWidth(loadingJustBar);
+            int loadingWidth = this.textRenderer.getWidth(loading);
+
+            int loadingX = centerX - loadingBarWidth / 2;
+
+            int loadingY = centerY - this.textRenderer.fontHeight - 10;
+            context.drawText(this.textRenderer, loading, loadingX, loadingY, 0xFFFFFFFF, true);
+
+            if (screenTick >= maxScreenTime) {
+                button.visible = true;
+            }
+        }
+    }
+    String fill = "█";
     @Override
     public void tick() {
+        loadScreen = loading();
         textSwapTicks--;
         if (textSwapTicks <= 0) {
             textSwapToggle = !textSwapToggle;
@@ -118,16 +142,41 @@ public class WeightCalcScreenManager extends Screen {
             if (currentFrame >= loadingFrames.length) currentFrame = 0;
             if (screenTick >= maxScreenTime) button.visible = true;
             if (screenTick >= maxScreenTime) button.active = true;
-            screenLabelsTexts[3] = "Calculando: " + loadingFrames[currentFrame];
             if (screenTick >= maxScreenTime) {
                 if (textSwapToggle){
-                    screenLabelsTexts[3] = "· Listo! ·";
-                }else screenLabelsTexts[3] = "- Listo! -";
+                    screenLabelsTexts[3] = loadingScreenLabel[1];
+                    fill = "█";
 
+                }else {
+                    screenLabelsTexts[3] = loadingScreenLabel[2];
+                    fill = "▓";
+                }
+
+            }else {
+                screenLabelsTexts[3] = loadingScreenLabel[0] + loadingFrames[currentFrame];
             }
         }
     }
 
+    private String loading(){
+        // █ lleno // ▒ no lleno
+        int i = Math.min(screenTick, maxScreenTime); //asi no se me crashea por hacerse muy grande, creo...
+        int total = maxScreenTime / 6;
+        int filled = i / 6;
+        int noFilled = Math.max(total - filled, 0);
+
+        /* loading = "["
+                + new String(new char[filled]).replace("\0", "█")
+                + new String(new char[noFilled]).replace("\0", "▒")
+                + "] | " + (i * 100 / maxScreenTime) + "%";
+                No se por que se me ocurrio usar esto en vez de repeat XD*/
+        loading = "["
+                + fill.repeat(filled)
+                + "▒".repeat(noFilled)
+                + "] | " + (i * 100 / maxScreenTime) + "%";
+        return loading;
+    }
+    //lo podria meter en el switch pero me da pereza
     private void button0(ButtonWidget button, TextFieldWidget textFlied) {
         button.active = false;
         textFlied.visible = true;
