@@ -39,7 +39,7 @@ public class ModItems {
     }
 
     public static void registerModItems(){
-        MakakoMorado.LOGGER.info("registrando items: " + MakakoMorado.MOD_ID);
+        MakakoMorado.LOGGER.info("Resgistrame este | (item) |" + MakakoMorado.MOD_ID);
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::addIngidientsItemGroup);
     }

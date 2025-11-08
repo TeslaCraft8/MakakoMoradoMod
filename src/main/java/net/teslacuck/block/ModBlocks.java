@@ -1,6 +1,5 @@
 package net.teslacuck.block;
 
-import net.fabricmc.fabric.api.block.v1.FabricBlockState;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
@@ -14,7 +13,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.teslacuck.MakakoMorado;
 import net.minecraft.registry.Registry;
-import org.apache.commons.compress.compressors.lz77support.LZ77Compressor;
+import net.teslacuck.block.custom.DeactivatedEsensiaOre;
 
 public class ModBlocks
 {
@@ -37,6 +36,10 @@ public class ModBlocks
             new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.BLACKSTONE).strength(1.8F, 9.0F), UniformIntProvider.create(2, 14)));
     public static final Block END_ESENSIA_ORE = registerBlock("end_esensia_ore",
             new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.END_STONE).strength(2.2F, 9.0F), UniformIntProvider.create(2, 60)));
+
+    //bloques más tacticos
+    public static final Block DEACTIVATED_BLACK_ESENSIA_ORE = registerBlock("deactivated_black_esensia_ore",
+            new DeactivatedEsensiaOre(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
 
     //registrar los bloques
     private static Block registerBlock (String name, Block block){

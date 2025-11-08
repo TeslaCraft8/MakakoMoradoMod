@@ -34,9 +34,12 @@ public class ModItemGroups {
                         entries.add(ModItems.ORE_DETECTOR);
                         entries.add(ModItems.WEIGHT_CALCULATOR);
 
+                        //custom blocks
+                        entries.add(ModBlocks.DEACTIVATED_BLACK_ESENSIA_ORE);
+
                     }).build());
 
     public static void registerItemGroups(){
-        MakakoMorado.LOGGER.info("Regsitrando grupos de items" + MakakoMorado.MOD_ID);
+        MakakoMorado.LOGGER.info("Regsitrando grupo de items | " + MakakoMorado.MOD_ID);
     }
 }
