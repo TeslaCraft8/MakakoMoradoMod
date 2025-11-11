@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "makakomorado:block/deepslate_esensia_ore"
+  }
+}

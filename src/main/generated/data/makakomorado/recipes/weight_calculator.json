@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "makakomorado:esensia"
+    },
+    "B": {
+      "item": "minecraft:stone_button"
+    },
+    "G": {
+      "item": "minecraft:glass"
+    },
+    "W": {
+      "item": "minecraft:blue_wool"
+    }
+  },
+  "pattern": [
+    "#G#",
+    "WBW",
+    "WWW"
+  ],
+  "result": {
+    "item": "makakomorado:weight_calculator"
+  },
+  "show_notification": true
+}

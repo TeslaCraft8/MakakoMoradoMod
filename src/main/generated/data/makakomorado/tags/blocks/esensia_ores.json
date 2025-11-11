@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "makakomorado:deactivated_sand_esensia_ore",
+    "makakomorado:sand_esensia_ore",
+    "makakomorado:black_esensia_ore",
+    "makakomorado:end_esensia_ore",
+    "makakomorado:esensia_ore",
+    "makakomorado:deepslate_esensia_ore"
+  ]
+}

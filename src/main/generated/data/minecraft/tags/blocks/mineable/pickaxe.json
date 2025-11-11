@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "makakomorado:esensia_block",
+    "makakomorado:raw_esensia_block",
+    "makakomorado:bloque_de_pelo_de_mono",
+    "#makakomorado:esensia_ores"
+  ]
+}

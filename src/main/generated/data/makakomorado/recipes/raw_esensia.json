@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "makakomorado:raw_esensia_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "makakomorado:raw_esensia"
+  }
+}

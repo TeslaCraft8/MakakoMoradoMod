@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 80,
+  "experience": 0.7,
+  "group": "esensia",
+  "ingredient": {
+    "item": "makakomorado:raw_esensia"
+  },
+  "result": "makakomorado:esensia"
+}

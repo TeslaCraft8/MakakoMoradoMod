@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "#makakomorado:esensia_ores",
+    "#minecraft:gold_ores",
+    "#minecraft:iron_ores",
+    "#minecraft:emerald_ores",
+    "#minecraft:diamond_ores"
+  ]
+}

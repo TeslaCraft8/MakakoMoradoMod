@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 120,
+  "experience": 0.7,
+  "group": "esensia",
+  "ingredient": {
+    "item": "makakomorado:sand_esensia_ore"
+  },
+  "result": "makakomorado:esensia"
+}

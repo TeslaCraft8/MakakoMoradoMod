@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "makakomorado:block/bloque_de_pelo_de_mono"
+  }
+}

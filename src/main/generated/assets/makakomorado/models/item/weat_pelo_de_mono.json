@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "makakomorado:item/weat_pelo_de_mono"
+  }
+}

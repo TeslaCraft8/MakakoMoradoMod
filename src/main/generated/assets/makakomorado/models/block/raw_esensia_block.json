@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "makakomorado:block/raw_esensia_block"
+  }
+}
