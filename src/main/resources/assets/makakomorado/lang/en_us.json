@@ -15,6 +15,9 @@
   "block.makakomorado.deepslate_esensia_ore": "Mena de esensia de deepslate",
   "block.makakomorado.black_esensia_ore": "Mena de esensia negra",
   "block.makakomorado.end_esensia_ore": "Mena de esensia del end",
+  "block.makakomorado.sand_esensia_ore": "Mena de esensia de arena",
+
+  "tooltip.makakomorado.ore_detector.tooltip": "Detecta materiales valiosos debajo de donde lo uses",
 
   "itemgroup.makakomorado": "Mono morado"
 }

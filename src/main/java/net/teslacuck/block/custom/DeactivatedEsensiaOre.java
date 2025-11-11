@@ -37,7 +37,6 @@ public class DeactivatedEsensiaOre extends Block {
         double y = pos.getY() + 0.5;
         double z = pos.getZ() + 0.5;
         if (player.getMainHandStack().getItem() == Items.ENDER_PEARL) {
-            player.sendMessage(Text.literal(player.getMainHandStack().getItem().toString().replace("_", " ")), true);
             itemStack.decrement(1);
             world.playSound(player, pos, SoundEvents.ENTITY_ENDER_EYE_DEATH, SoundCategory.BLOCKS);
 
@@ -128,7 +127,7 @@ public class DeactivatedEsensiaOre extends Block {
             world.addParticle(ParticleTypes.CLOUD, randomX, newY, randomZ, dx, dy, dz);
 
             world.playSound(player, pos, SoundEvents.ENTITY_ENDERMAN_TELEPORT, SoundCategory.BLOCKS, 0.3F, 1F);
-            world.setBlockState(randomBlockPos, ModBlocks.BLACK_ESENSIA_ORE.getDefaultState());
+            world.setBlockState(randomBlockPos, ModBlocks.SAND_ESENSIA_ORE.getDefaultState());
             world.removeBlock(pos, false);
 
         }

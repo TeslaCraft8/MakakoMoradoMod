@@ -14,18 +14,20 @@ import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.teslacuck.MakakoMorado;
 import net.minecraft.registry.Registry;
 import net.teslacuck.block.custom.DeactivatedEsensiaOre;
+import net.teslacuck.block.custom.SandEsensiaOre;
 
 public class ModBlocks
+
 {
 //bloques
     public static final Block BLOCK_OF_MONKEY_FUR =registerBlock("bloque_de_pelo_de_mono",
             new Block(FabricBlockSettings.copyOf(Blocks.WHITE_WOOL).sounds(BlockSoundGroup.WOOL)));
 
     public static final Block ESENSIA_BLOCK =registerBlock("esensia_block",
-            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).sounds(BlockSoundGroup.SCULK_CATALYST)));
+            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).sounds(BlockSoundGroup.SCULK_CATALYST).luminance(state -> 6)));
 
     public static final Block RAW_ESENSIA_BLOCK =registerBlock("raw_esensia_block",
-            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).sounds(BlockSoundGroup.AMETHYST_BLOCK)));
+            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).sounds(BlockSoundGroup.AMETHYST_BLOCK).luminance(state -> 5)));
 
     //ores tacticos
     public static final Block ESENSIA_ORE = registerBlock("esensia_ore",
@@ -36,10 +38,12 @@ public class ModBlocks
             new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.BLACKSTONE).strength(1.8F, 9.0F), UniformIntProvider.create(2, 14)));
     public static final Block END_ESENSIA_ORE = registerBlock("end_esensia_ore",
             new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.END_STONE).strength(2.2F, 9.0F), UniformIntProvider.create(2, 60)));
+    public static final Block SAND_ESENSIA_ORE = registerBlock("sand_esensia_ore",
+            new SandEsensiaOre(FabricBlockSettings.copyOf(Blocks.SANDSTONE).luminance(state -> 0).strength(2.2F, 9.0F), UniformIntProvider.create(2, 60)));
 
     //bloques más tacticos
-    public static final Block DEACTIVATED_BLACK_ESENSIA_ORE = registerBlock("deactivated_black_esensia_ore",
-            new DeactivatedEsensiaOre(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block DEACTIVATED_SAND_ESENSIA_ORE = registerBlock("deactivated_sand_esensia_ore",
+            new DeactivatedEsensiaOre(FabricBlockSettings.copyOf(Blocks.GLASS)));
 
     //registrar los bloques
     private static Block registerBlock (String name, Block block){
@@ -51,10 +55,7 @@ public class ModBlocks
     private static Item registerBlockItem (String name, Block block){
         return Registry.register(Registries.ITEM, new Identifier(MakakoMorado.MOD_ID, name),
                 new BlockItem(block, new FabricItemSettings()));
-
     }
-
-
 
     public static void registerModedBlocks(){
         MakakoMorado.LOGGER.info("registrando bloques para" + MakakoMorado.MOD_ID);

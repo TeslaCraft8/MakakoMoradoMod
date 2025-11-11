@@ -2,6 +2,8 @@ package net.teslacuck;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.entity.event.v1.ServerEntityCombatEvents;
+import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.teslacuck.block.ModBlocks;
 import net.teslacuck.item.ModItemGroups;
 import net.teslacuck.item.ModItems;
@@ -18,6 +20,8 @@ public class MakakoMorado implements ModInitializer {
         ModItems.registerModItems();
         ModItemGroups.registerItemGroups();
         ModBlocks.registerModedBlocks();
+
+        FuelRegistry.INSTANCE.add(ModItems.PELO_DE_MONO, 60);
 
     }
 }

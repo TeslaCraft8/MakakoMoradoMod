@@ -33,9 +33,11 @@ public class ModItemGroups {
                         //custom items
                         entries.add(ModItems.ORE_DETECTOR);
                         entries.add(ModItems.WEIGHT_CALCULATOR);
+                        entries.add(ModItems.CROWBAR);
 
                         //custom blocks
-                        entries.add(ModBlocks.DEACTIVATED_BLACK_ESENSIA_ORE);
+                        entries.add(ModBlocks.SAND_ESENSIA_ORE);
+                        entries.add(ModBlocks.DEACTIVATED_SAND_ESENSIA_ORE);
 
                     }).build());
 
