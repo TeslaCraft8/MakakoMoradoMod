@@ -21,6 +21,7 @@ public class ModItems {
     public static final Item CUBO_AUTISTA = registerItem("cubo_autista", new CuboAutista(new FabricItemSettings().rarity(Rarity.EPIC)));
 
     public static final Item CROWBAR = registerItem("crowbar", new Crowbar(new FabricItemSettings().rarity(Rarity.RARE)));
+    public static final Item VALVE = registerItem("valve", new Crowbar(new FabricItemSettings().rarity(Rarity.RARE)));
 
     public static final Item PELO_DE_MONO = registerItem("pelo_de_mono", new PeloDeMono(new FabricItemSettings().food(ModFoodComponents.MONKEY_FUR)));
     public static final Item WEAT_PELO_DE_MONO = registerItem("weat_pelo_de_mono", new Item(new FabricItemSettings().rarity(Rarity.RARE)));
@@ -32,6 +33,7 @@ public class ModItems {
             maxDamage(64)));
     public static final Item WEIGHT_CALCULATOR = registerItem("weight_calculator", new WeightCalculatorItem(new FabricItemSettings().rarity(Rarity.EPIC).
             maxDamage(64)));
+    public static final Item MECHANIC_ARM = registerItem("mechanic_arm", new Item(new FabricItemSettings().rarity(Rarity.EPIC)));
 
     private static void addIngidientsItemGroup(FabricItemGroupEntries entries){
         entries.add(CUBO_AUTISTA);

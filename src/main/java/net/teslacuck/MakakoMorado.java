@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.teslacuck.block.ModBlocks;
 import net.teslacuck.item.ModItemGroups;
 import net.teslacuck.item.ModItems;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -22,6 +23,7 @@ public class MakakoMorado implements ModInitializer {
         ModBlocks.registerModedBlocks();
 
         FuelRegistry.INSTANCE.add(ModItems.PELO_DE_MONO, 60);
+
 
     }
 }

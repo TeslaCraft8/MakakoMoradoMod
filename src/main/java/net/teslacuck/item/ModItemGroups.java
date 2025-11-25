@@ -34,6 +34,7 @@ public class ModItemGroups {
                         entries.add(ModItems.ORE_DETECTOR);
                         entries.add(ModItems.WEIGHT_CALCULATOR);
                         entries.add(ModItems.CROWBAR);
+                        entries.add(ModItems.MECHANIC_ARM);
 
                         //custom blocks
                         entries.add(ModBlocks.SAND_ESENSIA_ORE);

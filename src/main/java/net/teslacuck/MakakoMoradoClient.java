@@ -3,10 +3,10 @@ package net.teslacuck;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.LivingEntityFeatureRenderEvents;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.text.Text;
-import net.teslacuck.block.ModBlockEntities;
-import net.teslacuck.block.entity.OverlayBlockEntityRenderer;
 import net.teslacuck.packets.ModPackets;
 import net.teslacuck.screens.WeightCalcScreenManager;
 
@@ -21,6 +21,7 @@ public class MakakoMoradoClient implements ClientModInitializer {
                 );
             });
         });
-        BlockEntityRendererRegistry.register(ModBlockEntities.OVERLAY_BLOCK_ENTITY, OverlayBlockEntityRenderer::new);
+
+
     }
 }

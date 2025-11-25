@@ -34,7 +34,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.RAW_ESENSIA, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.PELO_DE_MONO, Models.GENERATED);
-        itemModelGenerator.register(ModItems.CROWBAR, Models.GENERATED);
         itemModelGenerator.register(ModItems.WEAT_PELO_DE_MONO, Models.GENERATED);
         itemModelGenerator.register(ModItems.ORE_DETECTOR, Models.GENERATED);
     }
